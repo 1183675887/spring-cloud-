@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="397a5e6b-d644-4e31-ad00-ca2d6d65b120" name="Default Changelist" comment="" />
+    <list default="true" id="397a5e6b-d644-4e31-ad00-ca2d6d65b120" name="Default Changelist" comment="最基本的消费者与提供者服务" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="JsBowerSettings">
     <node-interpreter value="project" />
@@ -24,14 +42,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/Maven/apache-maven-3.6.3" />
-        <option name="userSettingsFile" value="D:\Maven\apache-maven-3.6.3\conf\settings.xml" />
+        <option name="mavenHome" value="F:/Maven/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="F:\Maven\apache-maven-3.6.0\conf\settings.xml" />
       </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenRunner">
@@ -42,7 +55,6 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -50,22 +62,42 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/eureka/src/main/resources" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/springcloud-video-samples-5-8" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\spring-cloud demo\javaboycloud\eureka\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.ProviderApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="consumer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.javaboy.consumer.ConsumerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="eureka" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.javaboy.eureka.EurekaApplication" />
@@ -73,7 +105,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HystrixApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="hystrix" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.javaboy.hystrix.HystrixApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProviderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="provider" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.javaboy.provider.ProviderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -85,52 +132,26 @@
       <option name="presentableId" value="Default" />
       <updated>1628606624078</updated>
       <workItem from="1628606628385" duration="4027000" />
+      <workItem from="1628644720255" duration="17621000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state width="1478" height="208" key="GridCell.Tab.0.bottom" timestamp="1628610667438">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1628610667438" />
-    <state width="1478" height="208" key="GridCell.Tab.0.center" timestamp="1628610667437">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1628610667437" />
-    <state width="1478" height="208" key="GridCell.Tab.0.left" timestamp="1628610667437">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1628610667437" />
-    <state width="1478" height="208" key="GridCell.Tab.0.right" timestamp="1628610667438">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1628610667438" />
-    <state width="1478" height="208" key="GridCell.Tab.1.bottom" timestamp="1628609970878">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="208" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1628609970878" />
-    <state width="1478" height="208" key="GridCell.Tab.1.center" timestamp="1628609970878">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="208" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1628609970878" />
-    <state width="1478" height="208" key="GridCell.Tab.1.left" timestamp="1628609970878">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="208" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1628609970878" />
-    <state width="1478" height="208" key="GridCell.Tab.1.right" timestamp="1628609970878">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="208" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1628609970878" />
-    <state x="238" y="0" key="SettingsEditor" timestamp="1628609827172">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="238" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1628609827172" />
-    <state x="178" y="116" key="new project wizard" timestamp="1628607056312">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="178" y="116" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1628607056312" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
