@@ -8,15 +8,27 @@ public class HelloCommand extends HystrixCommand<String> {
 
     RestTemplate restTemplate;
 
-    public HelloCommand(Setter setter, RestTemplate restTemplate) {
+    String name;
+
+    public HelloCommand(Setter setter, RestTemplate restTemplate, String name) {
         super(setter);
+        this.name = name;
         this.restTemplate = restTemplate;
     }
 
+    /*这是运行的方法*/
+//    @Override
+//    protected String run() throws Exception {
+//        int i = 1 / 0;       //这是使用继承方法测试情况2.自己代码出现问题
+//        return restTemplate.getForObject("http://provider/hello", String.class);
+//    }
+
+    /*
+    * 测试方法
+    * */
     @Override
     protected String run() throws Exception {
-        int i = 1 / 0;       //这是使用继承方法测试情况2.自己代码出现问题
-        return restTemplate.getForObject("http://provider/hello", String.class);
+        return restTemplate.getForObject("http://provider/hello2?name={1}", String.class, name);
     }
 
     /*
@@ -25,7 +37,13 @@ public class HelloCommand extends HystrixCommand<String> {
     *  */
     @Override
     protected String getFallback() {
-        return "error-extends";
+        return "error-extends:" +getExecutionException().getMessage();
+    }
+
+    /*这个是删除缓存*/
+    @Override
+    protected String getCacheKey() {
+        return name;
     }
 
 }

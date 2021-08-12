@@ -1,5 +1,6 @@
 package com.javaboy.consumer.controller;
 
+import com.javaboy.consumer.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.client.ServiceInstance;
@@ -211,58 +212,58 @@ public class UserHelloController {
     /*
     * 这是测试RestTemplate的post方法
     * */
-//    @GetMapping("/hello6")
-//    public void hello6() {
-//        MultiValueMap<String, Object> map = new LinkedMultiValueMap<>();
-//        map.add("username", "javaboy");
-//        map.add("password", "123");
-//        map.add("id", 99);
-//        User user = restTemplate.postForObject("http://provider/user1", map, User.class);
-//        System.out.println(user);
-//
-//        user.setId(98);
-//        user = restTemplate.postForObject("http://provider/user2", user, User.class);
-//        System.out.println(user);
-//    }
-//
+    @GetMapping("/hello6")
+    public void hello6() {
+        MultiValueMap<String, Object> map = new LinkedMultiValueMap<>();
+        map.add("username", "javaboy");
+        map.add("password", "123");
+        map.add("id", 99);
+        User user = restTemplate.postForObject("http://provider/user1", map, User.class);
+        System.out.println(user);
+
+        user.setId(98);
+        user = restTemplate.postForObject("http://provider/user2", user, User.class);
+        System.out.println(user);
+    }
+
       //这是测试用户注册接口重定向
-//    @GetMapping("/hello7")
-//    public void hello7() {
-//        MultiValueMap<String, Object> map = new LinkedMultiValueMap<>();
-//        map.add("username", "javaboy");
-//        map.add("password", "123");
-//        map.add("id", 99);
-//        URI uri = restTemplate.postForLocation("http://provider/register", map);
-//        System.out.println(uri);
-//        String s = restTemplate.getForObject(uri, String.class);
-//        System.out.println(s);
-//    }
+    @GetMapping("/hello7")
+    public void hello7() {
+        MultiValueMap<String, Object> map = new LinkedMultiValueMap<>();
+        map.add("username", "javaboy");
+        map.add("password", "123");
+        map.add("id", 99);
+        URI uri = restTemplate.postForLocation("http://provider/register", map);
+        System.out.println(uri);
+        String s = restTemplate.getForObject(uri, String.class);
+        System.out.println(s);
+    }
 
 
     /*
     *测试RestTemplate的put方法
     *  */
-//    @GetMapping("/hello8")
-//    public void hello8() {
-//        MultiValueMap<String, Object> map = new LinkedMultiValueMap<>();
-//        map.add("username", "javaboy");
-//        map.add("password", "123");
-//        map.add("id", 99);
-//        restTemplate.put("http://provider/user1", map);
-//        User user = new User();
-//        user.setId(98);
-//        user.setUsername("zhangsan");
-//        user.setPassword("456");
-//        restTemplate.put("http://provider/user2", user);
-//    }
+    @GetMapping("/hello8")
+    public void hello8() {
+        MultiValueMap<String, Object> map = new LinkedMultiValueMap<>();
+        map.add("username", "javaboy");
+        map.add("password", "123");
+        map.add("id", 99);
+        restTemplate.put("http://provider/user1", map);
+        User user = new User();
+        user.setId(98);
+        user.setUsername("zhangsan");
+        user.setPassword("456");
+        restTemplate.put("http://provider/user2", user);
+    }
 
     /*
      *测试RestTemplate的delete方法
      *  */
-//    @GetMapping("/hello9")
-//    public void hello9() {
-//        restTemplate.delete("http://provider/user1?id={1}", 99);
-//        restTemplate.delete("http://provider/user2/{1}", 99);
-//    }
+    @GetMapping("/hello9")
+    public void hello9() {
+        restTemplate.delete("http://provider/user1?id={1}", 99);
+        restTemplate.delete("http://provider/user2/{1}", 99);
+    }
 
 }

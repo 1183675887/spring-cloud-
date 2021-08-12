@@ -1,6 +1,7 @@
 package com.javaboy.hystrix.service;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.cache.annotation.CacheRemove;
 import com.netflix.hystrix.contrib.javanica.cache.annotation.CacheResult;
 import com.netflix.hystrix.contrib.javanica.command.AsyncResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,13 @@ public class HelloService {
     @CacheResult//这个注解表示该方法的请求结果会被缓存起来，默认情况下，缓存的 key 就是方法的参数，缓存的 value 就是方法的返回值。
     public String hello3(String name) {
         return restTemplate.getForObject("http://provider/hello2?name={1}", String.class, name);
+    }
+
+    /*定义删除数据时也删除缓存的方法.测试时缓存未删除。*/
+    @HystrixCommand
+    @CacheRemove(commandKey = "hello3")
+    public String deleteUserByName(String name) {
+        return "缓存已删除";
     }
 
     public String error2(String name) {
