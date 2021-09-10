@@ -22,14 +22,14 @@ public class HelloController {
     @Autowired
     HelloService helloService;
 
-    @Autowired
-    RestTemplate restTemplate;
-
     /*这是常规的测试方法*/
     @GetMapping("/hello")
     public String hello() {
        return helloService.hello();
     }
+
+    @Autowired
+    RestTemplate restTemplate;
 
     /*这是请求命令的测试方法*/
 //    @GetMapping("/hello2")
@@ -85,7 +85,7 @@ public class HelloController {
         }
     }
 
-    /*测试请求缓存*/
+//    /*测试请求缓存*/
 //    @GetMapping("/hello4")
 //    public void hello4() {
 //        HystrixRequestContext ctx = HystrixRequestContext.initializeContext();

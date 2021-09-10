@@ -17,7 +17,6 @@ public class HystrixApplication {
         SpringApplication.run(HystrixApplication.class, args);
     }
 
-
     //提供一个 RestTemplate 实例
     @Bean
     @LoadBalanced

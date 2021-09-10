@@ -220,13 +220,12 @@ public class UserHelloController {
         map.add("id", 99);
         User user = restTemplate.postForObject("http://provider/user1", map, User.class);
         System.out.println(user);
-
         user.setId(98);
         user = restTemplate.postForObject("http://provider/user2", user, User.class);
         System.out.println(user);
     }
 
-      //这是测试用户注册接口重定向
+    //这是测试用户注册接口重定向
     @GetMapping("/hello7")
     public void hello7() {
         MultiValueMap<String, Object> map = new LinkedMultiValueMap<>();

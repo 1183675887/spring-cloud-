@@ -69,7 +69,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/springcloud-video-samples-6-7" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/config-client/src/main/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -78,6 +78,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\spring cloud demo\spring-cloud-\javaboycloud\config-client\src\main\resources" />
       <recent name="E:\spring-cloud demo\javaboycloud\eureka\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -88,15 +89,27 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ProviderApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="config-client" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.javaboy.configclient.ConfigClientApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="config-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.javaboy.configserver.ConfigServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -122,6 +135,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.javaboy.gateway.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HystrixApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="hystrix" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.javaboy.hystrix.HystrixApplication" />
@@ -139,6 +159,13 @@
     <configuration name="ProviderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="provider" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.javaboy.provider.ProviderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZuulApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="zuul" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.javaboy.zuul.ZuulApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,6 +189,11 @@
       <workItem from="1628674584726" duration="12000" />
       <workItem from="1628730557515" duration="19509000" />
       <workItem from="1628755289623" duration="115000" />
+      <workItem from="1628755692192" duration="4751000" />
+      <workItem from="1628816529231" duration="2191000" />
+      <workItem from="1630390231415" duration="4658000" />
+      <workItem from="1630475823994" duration="3617000" />
+      <workItem from="1631081436554" duration="6266000" />
     </task>
     <servers />
   </component>

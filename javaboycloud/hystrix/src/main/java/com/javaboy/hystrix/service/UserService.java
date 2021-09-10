@@ -19,7 +19,7 @@ public class UserService {
     @Autowired
     RestTemplate restTemplate;
 
-      /*常规的请求合并*/
+//      /*常规的请求合并*/
 //    public List<User> getUsersByIds(List<Integer> ids) {
 //        User[] users = restTemplate.getForObject("http://provider/user/{1}", User[].class, StringUtils.join(ids, ","));
 //        return Arrays.asList(users);
